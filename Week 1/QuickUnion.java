@@ -20,6 +20,10 @@ public class QuickUnion {
     public void union(int p, int q) {
         int i = root(p);
         int j = root(q);
+        // for weighted quick union
+        // if (i == j) return;
+        // if (sz[i] < sz[j]) {id[i] = j; sz[j] += sz[i];}
+        // else {id[j] = i; sz[i] += sz[j];}
         id[i] = j;
     }
 }
